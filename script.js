@@ -1,0 +1,48 @@
+var starttime = 0;
+var check;
+var onemin = 1000 * 0.5;
+
+function changedot() {
+    var d = new Date();
+    var n = d.getTime();
+    if (n > (starttime + (onemin * 30))) {
+        document.getElementById("dot5").style.color = "grey";
+        document.body.style.backgroundColor = "black";
+    }
+    else if (n > (starttime + (onemin * 29))) {
+        document.getElementById("dot4").style.color = "grey";
+    }
+    else if (n > (starttime + (onemin * 28))) {
+        document.getElementById("dot3").style.color = "grey";
+    }
+    else if (n > (starttime + (onemin * 27))) {
+        document.getElementById("dot2").style.color = "grey";
+    }
+    else if (n > (starttime + (onemin * 26))) {
+        document.getElementById("dot1").style.color = "grey";
+    }
+    else if (n > (starttime + (onemin * 25))) {
+        document.getElementById("dot5").style.color = "black";
+        document.body.style.backgroundColor = "grey";
+    }
+    else if (n > (starttime + (onemin * 20))) {
+        document.getElementById("dot4").style.color = "black";
+    }
+    else if (n > (starttime + (onemin * 15))) {
+        document.getElementById("dot3").style.color = "black";
+    }
+    else if (n > (starttime + (onemin * 10))) {
+        document.getElementById("dot2").style.color = "black";
+    }
+    else if (n > (starttime + (onemin * 5))) {
+        document.getElementById("dot1").style.color = "black";
+    }
+
+
+}
+
+function myFunction() {
+    var d = new Date();
+    starttime = d.getTime();
+    check = setInterval(changedot, 10);
+}
