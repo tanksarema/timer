@@ -1,6 +1,6 @@
 var starttime = 0;
 var check;
-var onemin = 1000 * 0.5;
+var onemin = 1000 * 0.3;
 
 function changedot() {
     var d = new Date();
