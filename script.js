@@ -1,6 +1,6 @@
 var starttime = 0;
 var check;
-var onemin = 1000 * 0.3;
+var onemin = 1000 * 60;
 
 function changedot() {
     var d = new Date();
@@ -8,6 +8,7 @@ function changedot() {
     if (n > (starttime + (onemin * 30))) {
         document.getElementById("dot5").style.color = "grey";
         document.body.style.backgroundColor = "black";
+        myFunction();
     }
     else if (n > (starttime + (onemin * 29))) {
         document.getElementById("dot4").style.color = "grey";
